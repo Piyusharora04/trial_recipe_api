@@ -74,6 +74,7 @@ def calculate_implicit_feedback_scores(history_recipe_nos):
 #     return results
 
 def recommend_recipes(user_history_json_file):
+# def recommend_recipes(user_history_recipe_nos):
     
     with open(user_history_json_file, 'r') as f:
         user_history = json.load(f)
@@ -108,7 +109,6 @@ def recommend_recipes(user_history_json_file):
     return results_df 
 
 
-
 app = Flask(__name__) 
 
 @app.route('/recommended', methods=['POST'])
@@ -127,4 +127,4 @@ def welcome():
     return "Welcom to this project"
 
 # if __name__ == '__main':
-#     app.run(debug = True, port = 3000, use_reloader=False)
+#     app.run(debug = True)
