@@ -124,7 +124,7 @@ def recommend():
 
 @app.route('/')
 def welcome():
-    return "Welcom to this project"
+    return "Welcome to this project"
 
-# if __name__ == '__main':
-#     app.run(debug = True)
+# if __name__ == '__main__':
+#     app.run(debug = True, port = 3000, use_reloader = False)
