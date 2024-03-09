@@ -111,7 +111,7 @@ def recommend_recipes(user_history_json_file):
 
 app = Flask(__name__) 
 
-@app.route('/recommend', methods=['POST'])
+@app.route('/', methods=['POST'])
 def recommend():
     user_history = request.get_json()
     print(type(user_history))
