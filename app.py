@@ -122,7 +122,7 @@ def recommend():
 
     return recommendations_df , 200
 
-@app.route('/hello')
+@app.route('/')
 def welcome():
     return "Welcome to this project"
 
