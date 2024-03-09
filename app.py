@@ -122,5 +122,9 @@ def recommend():
 
     return recommendations_df , 200
 
+@app.route('/trial')
+def welcome():
+    return "Welcom to this project"
+
 # if __name__ == '__main':
 #     app.run(debug = True, port = 3000, use_reloader=False)
