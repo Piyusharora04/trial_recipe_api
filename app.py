@@ -114,15 +114,15 @@ app = Flask(__name__)
 @app.route('/recommended', methods=['POST'])
 def recommend():
     user_history = request.get_json()
-    print(type(user_history))
+
     with open('result.json', 'w') as fp:
         json.dump(user_history, fp)
-#     print(type(user_history_data))
+
     recommendations_df = recommend_recipes('result.json')
 
     return recommendations_df , 200
 
-@app.route('/')
+@app.route('/hello')
 def welcome():
     return "Welcome to this project"
 
