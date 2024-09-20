@@ -111,7 +111,7 @@ def recommend_recipes(user_history_json_file):
 
 app = Flask(__name__) 
 
-@app.route('/recommended', methods=['POST'])
+@app.route('/recommended', methods=['POST','GET'])
 def recommend():
     user_history = request.get_json()
 
@@ -120,11 +120,11 @@ def recommend():
 
     recommendations_df = recommend_recipes('result.json')
 
-    return recommendations_df , 200
+    return recommendations_df , 210
 
 @app.route('/')
 def welcome():
     return "Welcome to this project"
 
-# if __name__ == '__main__':
-#     app.run(debug = True, port = 3000, use_reloader = False)
+if __name__ == '__main__':
+    app.run(debug = True, port = 3000, use_reloader = False)
