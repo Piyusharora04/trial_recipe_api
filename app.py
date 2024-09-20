@@ -126,5 +126,5 @@ def recommend():
 def welcome():
     return "Welcome to this project"
 
-if __name__ == '__main__':
-    app.run(debug = True, port = 3000, use_reloader = False)
+# if __name__ == '__main__':
+#     app.run(debug = True, port = 3000, use_reloader = False)
