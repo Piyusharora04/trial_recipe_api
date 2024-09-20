@@ -124,7 +124,8 @@ def recommend():
 
 @app.route('/')
 def welcome():
-    return "Welcome to this project"
+    text = "welcome to the Recipe Recommendation Project\nYou are recommended to use postman or other any api testing platform to check its performance\nYou need to add 'recommended' after the link and give a json file ass the input and method should be set to 'POST'.\nThe JSON file input should be a dictionary with key as 'recipe_no' (that in my project is a refrence to the the repcipes in the dataset) followed by a list of some random integrs between 1 to 2000."
+    return text
 
 if __name__ == '__main__':
     app.run(debug = True, port = 3000, use_reloader = False)
